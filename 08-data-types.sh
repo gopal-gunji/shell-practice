@@ -8,6 +8,6 @@ echo "The sum of $NUM1 and $NUM2 is: $SUM"
 echo "Sume is : $SUM"
 
 #Array declaration
-FRUITS =("apple" "banana" "promogranate" "grapes")
+FRUITS=("apple" "banana" "promogranate" "grapes")
 
 echo " Fruits are : ${FRUITS[@]}"
