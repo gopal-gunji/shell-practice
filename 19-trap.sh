@@ -1,8 +1,7 @@
 #!/bin/bash
 
 set -e
-
-trap "echo 'An error occurred. Exiting...'; exit 1" ERR
+trap 'echo "there is an error in $LINENO, command: $BASH_COMMAND"' ERR
 
 echo "This is a trap command example"
 echo " hello world"
