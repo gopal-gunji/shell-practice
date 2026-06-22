@@ -29,6 +29,6 @@ do
         dng install $package -y &>> $LOG_FILE
         VALIDATE $? "$package Installation"
         else
-            echo "$package is already installed"
+            echo "$package is already installed, skipping installation" | tee -a $LOG_FILE
         fi
     done
