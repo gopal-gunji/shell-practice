@@ -8,7 +8,7 @@ M="\e[35m"
 C="\e[36m"
 W="\e[37m"
 N="\e[0m"
-LOGS_DIR=/home/ec-2-user/app-logs
+LOGS_DIR=/home/ec2-user/app-logs
 LOGS_FILE="$LOG_DIR/$0.log"
 
 if [ ! -d $LOGS_DIR ]; then 
