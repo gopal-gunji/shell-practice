@@ -23,4 +23,6 @@ FILES_TO_DELETE=$($LOGS_DIR -name "*.log" -type f  -mtime +14)
 while IFS= read -r filepath; do
     # process each line here
     echo "Deleting file : $filepath"
+    rm -f $filepath
+    echo "Deleted file : $filepath"
 done <<< $FILE_TO_DELETE # input which variable to read
