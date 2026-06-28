@@ -9,3 +9,8 @@ do
    # Increment the counter
    ((count++)) 
 done
+
+while IFS= read -r line; do
+    # process each line here
+    echo "$line"
+done < ./21-script.sh # input which file to read
