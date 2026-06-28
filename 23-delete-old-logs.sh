@@ -17,10 +17,10 @@ if [ ! -d $LOGS_DIR ]; then
 fi 
 
 FILES_TO_DELETE=$($LOGS_DIR -name "*.log" -type f  -mtime +14)
-echo "$FILES_TO_DELETE"
+# echo "$FILES_TO_DELETE"
 
 
 while IFS= read -r filepath; do
     # process each line here
-    echo "$filepath"
+    echo "Deleting file : $filepath"
 done <<< $FILE_TO_DELETE # input which variable to read
