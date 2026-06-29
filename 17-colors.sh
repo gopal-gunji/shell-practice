@@ -1,18 +1,11 @@
 #!/bin/bash
 
-
-
-
 USERID=$(id -u)
 LOGS_FOLDER="/var/log/shell-script"
 LOG_FILE="/var/log/shell-script/$0.log"
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
-B="\e[34m"
-M="\e[35m"
-C="\e[36m"
-W="\e[37m"
 N="\e[0m"
 
 if [ $USERID -ne 0 ]; then 
