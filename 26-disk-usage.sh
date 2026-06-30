@@ -15,10 +15,10 @@ USAGE_THRESHOLD=3
 while IFS= read -r line
 do
     USAGE=$(df -hT | grep -v Filesystem | awk '{print $6}' | cut -d "%" -f1)
-    PARTITION+$(df -hT | grep -v Filesystem | awk '{print $7}')
+    PARTITION+=$(df -hT | grep -v Filesystem | awk '{print $7}')
 
-    if [$USAGE -gt $USAGE_THRESHOLD ]; then
-        MESSAGE+="High DISK USAGE On $PARTITION:$USAGE
+    if [ "$USAGE" -gt "$USAGE_THRESHOLD" ]; then
+        MESSAGE+="High DISK USAGE On $PARTITION:$USAGE"
 
 done <<< $DISC_USAGE
 
